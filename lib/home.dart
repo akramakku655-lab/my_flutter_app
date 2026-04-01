@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_flutter_app/abstract.dart';
+import 'package:my_flutter_app/certificates.dart';
 import 'package:my_flutter_app/pre_conf.dart';
+import 'package:my_flutter_app/workshop.dart';
 // import 'package:my_flutter_app/abstract.dart';
 // import 'package:my_flutter_app/certificates.dart';
 // import 'package:my_flutter_app/pre_conf.dart';
@@ -161,8 +163,20 @@ class _DashboardPageState extends State<DashboardPage> {
                   onTap: () => Get.to(PreConferencePage()),
                   child: gridItem(context, Icons.calendar_today, "Pre-Conf"),
                 ),
-                gridItem(context, Icons.build, "Workshop"),
-                gridItem(context, Icons.card_membership, "Certificates"),
+                GestureDetector(
+                  onTap: () => Get.to(WorkShopPage()),
+
+                  child: gridItem(context, Icons.build, "Workshop"),
+                ),
+                GestureDetector(
+                  onTap: () => Get.to(CertificatePage()),
+
+                  child: gridItem(
+                    context,
+                    Icons.card_membership,
+                    "Certificates",
+                  ),
+                ),
               ],
             ),
 

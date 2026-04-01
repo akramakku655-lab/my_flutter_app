@@ -87,7 +87,7 @@ class WorkShopPage extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.green,
         onPressed: () {},
         icon: Icon(Icons.add, color: Colors.white),
         label: Text("Submit", style: TextStyle(color: Colors.white)),
