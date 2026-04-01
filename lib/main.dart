@@ -11,6 +11,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(home: MainBottomBar());
+    return const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MainBottomBar(),
+    );
   }
 }

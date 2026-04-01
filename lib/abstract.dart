@@ -4,7 +4,7 @@ class Abstractpage extends StatelessWidget {
   const Abstractpage({super.key});
   Widget abstractCard(String title, String id, String status, Color color) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      margin: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -52,8 +52,20 @@ class Abstractpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Abstract"),
-        backgroundColor: Color(0xFF2F3C7E),
+        backgroundColor: Colors.teal,
+        centerTitle: true,
+        title: const Text(
+          "VIDYEN",
+          style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person_2_outlined),
+            onPressed: () {},
+          ),
+          IconButton(icon: const Icon(Icons.logout), onPressed: () {}),
+          const SizedBox(width: 8),
+        ],
       ),
       body: ListView(
         children: [
@@ -78,7 +90,7 @@ class Abstractpage extends StatelessWidget {
         onPressed: () {
           ("Submit clicked");
         },
-        backgroundColor: Color.fromARGB(255, 46, 70, 193),
+        backgroundColor: Colors.teal,
         icon: Icon(Icons.add, color: Colors.white),
         label: Text(
           "Submit Abstarction",

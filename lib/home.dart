@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_flutter_app/abstract.dart';
+import 'package:my_flutter_app/pre_conf.dart';
 // import 'package:my_flutter_app/abstract.dart';
 // import 'package:my_flutter_app/certificates.dart';
 // import 'package:my_flutter_app/pre_conf.dart';
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      // debugShowCheckedModeBanner: false,
       home: DashboardPage(),
     );
   }
@@ -156,7 +157,10 @@ class _DashboardPageState extends State<DashboardPage> {
                     subtitle: "submission",
                   ),
                 ),
-                gridItem(context, Icons.calendar_today, "Pre-Conf"),
+                GestureDetector(
+                  onTap: () => Get.to(PreConferencePage()),
+                  child: gridItem(context, Icons.calendar_today, "Pre-Conf"),
+                ),
                 gridItem(context, Icons.build, "Workshop"),
                 gridItem(context, Icons.card_membership, "Certificates"),
               ],
